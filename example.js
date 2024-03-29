@@ -1,7 +1,7 @@
 function correctFooBar() {
-    const foo = "bar";
-  }
-  
-function incorrectFoo(){
-    const foo = "baz"; // Problem!
+  const foo = 'bar'
+}
+
+function incorrectFoo() {
+  const foo = 'baz' // Problem!
 }
