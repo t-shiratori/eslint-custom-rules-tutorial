@@ -2,7 +2,7 @@
 'use strict'
 
 // Import the ESLint plugin locally
-const eslintPluginExample = require('./eslint-plugin-example')
+const eslintPluginExample = require('./eslint-rules/eslint-plugin-example')
 
 module.exports = [
   {
