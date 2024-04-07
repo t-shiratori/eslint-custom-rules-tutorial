@@ -6,6 +6,9 @@ const plugin = {
     },
     fixable: 'code',
     schema: [],
+    messages: {
+      fooBarMessage: 'Value other than "bar" assigned to `const foo`. Unexpected value: {{ notBar }}.',
+    },
   },
   create(context) {
     return {
@@ -26,7 +29,7 @@ const plugin = {
                */
               context.report({
                 node,
-                message: 'Value other than "bar" assigned to `const foo`. Unexpected value: {{ notBar }}.',
+                messageId: 'fooBarMessage',
                 data: {
                   notBar: node.init.value,
                 },
