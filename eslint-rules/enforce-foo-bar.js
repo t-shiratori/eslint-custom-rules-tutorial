@@ -1,4 +1,4 @@
-const enforceFooBarRule = {
+export const enforceFooBarRule = {
   meta: {
     type: 'problem',
     docs: {
@@ -44,5 +44,3 @@ const enforceFooBarRule = {
     }
   },
 }
-
-export default enforceFooBarRule
