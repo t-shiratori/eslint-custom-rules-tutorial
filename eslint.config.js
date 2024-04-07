@@ -1,10 +1,10 @@
 'use strict'
-import eslintRules from './eslint-rules-plugin/index.js'
+import eslintRulesPlugin from './eslint-rules-plugin/index.js'
 
 export default [
   {
     files: ['src/**/*.js'],
-    plugins: { localRules: eslintRules },
+    plugins: { localRules: eslintRulesPlugin },
     rules: {
       'no-unused-vars': 'error',
       'localRules/enforce-foo-bar': 'error',
