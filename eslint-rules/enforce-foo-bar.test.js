@@ -1,3 +1,4 @@
+import * as vitest from 'vitest'
 import { RuleTester } from 'eslint'
 import fooBarRule from './enforce-foo-bar.js'
 
@@ -8,22 +9,27 @@ ruleTester.run(
   'enforce-foo-bar', // rule name
   fooBarRule, // rule code
   {
-    // checks
-    // 'valid' checks cases that should pass
     valid: [
       {
+        name: '変数名がfooで、内容がbarの場合',
         code: "const foo = 'bar';",
       },
+      {
+        name: '変数名がfoo以外で、内容がbar以外の場合',
+        code: "const huga = 'bar';",
+      },
     ],
-    // 'invalid' checks cases that should not pass
     invalid: [
       {
+        name: '変数名がfooで、内容がbar以外の場合はbarに修正される',
         code: "const foo = 'baz';",
         output: 'const foo = "bar";',
-        errors: 1,
+        errors: [
+          {
+            messageId: 'fooBarMessage',
+          },
+        ],
       },
     ],
   },
 )
-
-console.log('All tests passed!')
