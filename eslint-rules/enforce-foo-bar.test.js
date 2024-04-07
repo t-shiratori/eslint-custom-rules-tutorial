@@ -1,11 +1,7 @@
-const { RuleTester } = require('eslint')
-const fooBarRule = require('./enforce-foo-bar')
+import { RuleTester } from 'eslint'
+import fooBarRule from './enforce-foo-bar.js'
 
-const ruleTester = new RuleTester({
-  // Must use at least ecmaVersion 2015 because
-  // that's when `const` variables were introduced.
-  parserOptions: { ecmaVersion: 2015 },
-})
+const ruleTester = new RuleTester({ languageOptions: { ecmaVersion: 2015 } })
 
 // Throws error if the tests in ruleTester.run() do not pass
 ruleTester.run(
