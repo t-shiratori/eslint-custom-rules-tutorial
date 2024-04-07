@@ -1,7 +1,7 @@
 import { RuleTester } from 'eslint'
 import { enforceFooBarRule } from './enforce-foo-bar.js'
 
-const ruleTester = new RuleTester({ languageOptions: { ecmaVersion: 2015 } })
+const ruleTester = new RuleTester({ languageOptions: { ecmaVersion: 'latest' } })
 
 // Throws error if the tests in ruleTester.run() do not pass
 ruleTester.run(
