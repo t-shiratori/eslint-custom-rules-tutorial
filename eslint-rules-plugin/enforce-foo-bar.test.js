@@ -1,13 +1,12 @@
-import * as vitest from 'vitest'
 import { RuleTester } from 'eslint'
-import fooBarRule from './enforce-foo-bar.js'
+import { enforceFooBarRule } from './enforce-foo-bar.js'
 
 const ruleTester = new RuleTester({ languageOptions: { ecmaVersion: 2015 } })
 
 // Throws error if the tests in ruleTester.run() do not pass
 ruleTester.run(
   'enforce-foo-bar', // rule name
-  fooBarRule, // rule code
+  enforceFooBarRule, // rule code
   {
     valid: [
       {

@@ -1,5 +1,5 @@
 'use strict'
-import eslintRules from './eslint-rules/index.js'
+import eslintRules from './eslint-rules-plugin/index.js'
 
 export default [
   {
