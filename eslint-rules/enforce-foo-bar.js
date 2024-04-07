@@ -1,4 +1,4 @@
-const plugin = {
+const enforceFooBarRule = {
   meta: {
     type: 'problem',
     docs: {
@@ -45,4 +45,4 @@ const plugin = {
   },
 }
 
-export default plugin
+export default enforceFooBarRule
