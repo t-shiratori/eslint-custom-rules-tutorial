@@ -1,20 +1,13 @@
-// eslint.config.js
 'use strict'
+import eslintRules from './eslint-rules/index.js'
 
-// Import the ESLint plugin locally
-const eslintPluginExample = require('./eslint-rules/eslint-plugin-example')
-
-module.exports = [
+export default [
   {
-    files: ['**/*.js'],
-    languageOptions: {
-      sourceType: 'commonjs',
-      ecmaVersion: 'latest',
-    },
-    // Using the eslint-plugin-example plugin defined locally
-    plugins: { example: eslintPluginExample },
+    files: ['src/**/*.js'],
+    plugins: { localRules: eslintRules },
     rules: {
-      'example/enforce-foo-bar': 'error',
+      'no-unused-vars': 'error',
+      'localRules/enforce-foo-bar': 'error',
     },
   },
 ]

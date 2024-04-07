@@ -1,4 +1,4 @@
-module.exports = {
+const plugin = {
   meta: {
     type: 'problem',
     docs: {
@@ -41,3 +41,5 @@ module.exports = {
     }
   },
 }
+
+export default plugin
