@@ -25,7 +25,7 @@ ruleTester.run(
         output: 'const foo = "bar";',
         errors: [
           {
-            messageId: 'fooBarMessage',
+            messageId: 'fooBarMessageId',
           },
         ],
       },

@@ -7,7 +7,7 @@ export const enforceFooBarRule = {
     fixable: 'code',
     schema: [],
     messages: {
-      fooBarMessage: 'Value other than "bar" assigned to `const foo`. Unexpected value: {{ notBar }}.',
+      fooBarMessageId: 'Value other than "bar" assigned to `const foo`. Unexpected value: {{ notBar }}.',
     },
   },
   create(context) {
@@ -29,7 +29,7 @@ export const enforceFooBarRule = {
                */
               context.report({
                 node,
-                messageId: 'fooBarMessage',
+                messageId: 'fooBarMessageId',
                 data: {
                   notBar: node.init.value,
                 },
