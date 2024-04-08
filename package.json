@@ -8,6 +8,7 @@
     "test": "vitest --config eslint-rules-plugin/vitest.config.js run",
     "format": "prettier . --write",
     "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "lint:i": "eslint --inspect-config"
   },
   "keywords": [],
