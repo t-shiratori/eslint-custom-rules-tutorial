@@ -5,11 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "vitest --config eslint-rules-plugin/vitest.config.js run",
-    "format": "prettier {src,eslint-rules-plugin}/**/*.js --write",
     "lint": "eslint",
+    "lint:test": "vitest --config eslint-rules-plugin/vitest.config.js run",
     "lint:fix": "eslint --fix",
-    "lint:i": "eslint --inspect-config"
+    "lint:i": "eslint --inspect-config",
+    "format": "prettier {src,eslint-rules-plugin}/**/*.js --write"
   },
   "keywords": [],
   "author": "",
