@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "vitest --config eslint-rules-plugin/vitest.config.js run",
-    "format": "prettier . --write",
+    "format": "prettier {src,eslint-rules-plugin}/**/*.js --write",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "lint:i": "eslint --inspect-config"
